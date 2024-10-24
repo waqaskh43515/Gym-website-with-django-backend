@@ -1,0 +1,27 @@
+{% extends "base.html" %} 
+{% block content %}  
+
+<div class="col-md-12 pr-0" style="argin-top: 50px; color: white; text-align: center">
+    <div class="box b2">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mr-auto">
+          <div class="detail-box">
+            <h3>
+              {{ data.Name }} 
+            </h3>
+            <p>
+              {{ data.Message | safe}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="col-md-6" style="argin-top: 50px; color: white; text-align: center">
+    <img src="/media/{{data.new_image}}" class="img-fluid"/>
+  </div>
+
+
+
+{% endblock %}

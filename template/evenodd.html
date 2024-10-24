@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+    <title>Calculator</title>
+</head>
+<body>
+
+<form method="POST" style="text-align: center; background-color: #eee; margin: 50px;">
+    {% if error %}
+     <div class="alert alert-danger" role="alert">
+        Please Enter The Value
+     </div>  
+     {% endif %} 
+     
+     
+     {% csrf_token %}
+     <div>
+       <input type="text" name="num1" class="form-control"/>
+    </div>
+    <div>
+    <div class="d-flex">
+      <button type="submit">
+        SEND
+      </button>
+    </div>
+
+    <div>
+        <input type="text" placeholder="result" value="{{result}}"/>
+    </div>
+  </form>
+
+</body>

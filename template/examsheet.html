@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+    <title>Calculator</title>
+</head>
+<body>
+
+<form method="POST" style="text-align: center; background-color: #eee; margin: 50px;">
+    {% csrf_token %}
+
+    <div>
+       <input type="text" placeholder="Suject 1" name="num1" class="form-control"/>
+    </div>
+    <div>
+      <input type="text" placeholder="Subject 2"  name="num2" class="form-control"/>
+    </div> 
+    <div>
+        <input type="text" placeholder="Subject 3"  name="num3" class="form-control"/>
+      </div> 
+      <div>
+        <input type="text" placeholder="Subject 4"  name="num4" class="form-control"/>
+      </div> 
+      <div>
+        <input type="text" placeholder="Subject 5"  name="num5" class="form-control"/>
+      </div> 
+    <div class="d-flex">
+      <button type="submit" style="margin: 10px; text-align: center">
+        Calculate
+      </button>
+    </div>
+
+    <div>
+        <input type="text" placeholder="Total" class="form-control" value="{{Total}}"/>
+    </div>
+    <div>
+        <input type="text" placeholder="Percentage" class="form-control" value="{{Percentage}}"/>
+    </div>
+    <div>
+        <input type="text" placeholder="Devision" class="form-control" value="{{Dev}}"/>
+    </div>
+  </form>
+
+</body>
